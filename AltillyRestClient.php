@@ -2,7 +2,7 @@
 
 /**
  * PHP REST Client for altilly.com
- * https://github.com/altilly/php-restclient
+ * https://github.com/altilly/php-altillyrestclient
  *
  * Version: 0.1.0
  * Last Modified: November 21, 2018
