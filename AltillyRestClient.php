@@ -318,6 +318,22 @@ class AltillyRestClient implements Iterator, ArrayAccess {
 		return $response_json;
 
     }
+
+	public function publicAddressInfo($address = null){
+	
+		$response_json = new stdClass();
+
+		if ($address == null)
+			return {};
+		else
+			$result = $this->get("/public/addressinfo/" . $address);
+
+		$response_json->httpcode = $result->info->http_code;
+		$response_json->result = $result->decode_response();
+		
+		return $response_json;
+
+    }
 	
 	public function publicTicker($ticker = null){
 	
